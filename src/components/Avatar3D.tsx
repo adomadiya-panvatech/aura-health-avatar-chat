@@ -1,6 +1,7 @@
+
 import { useRef, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Text3D, Center, Environment } from "@react-three/drei";
+import { OrbitControls, Center, Environment } from "@react-three/drei";
 import * as THREE from "three";
 import { AvatarState } from "./HealthcareAvatar";
 
@@ -168,21 +169,6 @@ export const Avatar3D = ({ avatarState }: Avatar3DProps) => {
         
         {/* Avatar */}
         <AvatarMesh avatarState={avatarState} />
-        
-        {/* Floating status text (simplified) */}
-        <Center position={[0, -3, 0]}>
-          <Text3D
-            font="/fonts/Inter_Bold.json"
-            size={0.15}
-            height={0.01}
-            curveSegments={8}
-          >
-            {avatarState.isSpeaking ? 'Speaking' : 
-             avatarState.isListening ? 'Listening' : 
-             'Healthcare AI'}
-            <meshStandardMaterial color="#4a90e2" />
-          </Text3D>
-        </Center>
         
         {/* Controls */}
         <OrbitControls
