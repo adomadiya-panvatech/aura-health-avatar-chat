@@ -143,11 +143,11 @@ export const LandingPage = () => {
 
       {/* Modal with Healthcare Avatar */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent className="max-w-6xl w-full h-[80vh] p-0">
-          <DialogHeader className="p-6 pb-0">
-            <DialogTitle>AI Healthcare Assistant</DialogTitle>
+        <DialogContent className="w-[95vw] max-w-7xl h-[90vh] max-h-screen p-0 m-4 sm:m-6">
+          <DialogHeader className="p-4 sm:p-6 pb-0">
+            <DialogTitle className="text-lg sm:text-xl">AI Healthcare Assistant</DialogTitle>
           </DialogHeader>
-          <div className="flex-1 p-6 pt-0">
+          <div className="flex-1 p-4 sm:p-6 pt-0 overflow-hidden">
             <HealthcareAvatar />
           </div>
         </DialogContent>
