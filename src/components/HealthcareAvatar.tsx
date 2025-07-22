@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Avatar3D } from "./Avatar3D";
 import { VoiceInterface } from "./VoiceInterface";
 import { ConversationPanel } from "./ConversationPanel";
 import { HealthcarePrompts } from "./HealthcarePrompts";
@@ -173,7 +172,9 @@ export const HealthcareAvatar = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <Card className="relative h-96 lg:h-[600px] overflow-hidden bg-gradient-avatar shadow-medical">
-          <Avatar3D avatarState={avatarState} />
+          <div className="w-full h-full bg-gray-800 flex items-center justify-center">
+            <p className="text-white">Avatar Placeholder</p>
+          </div>
           
           {/* Avatar Controls */}
           <div className="absolute bottom-4 left-4 right-4 flex justify-center gap-4">
